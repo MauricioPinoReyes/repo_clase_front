@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetPals - La Red Social para tu Mascota</title>
+    <style>
+        /* Estilos básicos para que la landing se vea genial desde el principio */
+        :root {
+            --primary: #ff6b6b;
+            --secondary: #4ecdc4;
+            --dark: #2f3e46;
+            --light: #f7f9fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+
+        header {
+            background-color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #ffe6e6 0%, #e6ffff 100%);
+            min-height: 60vh;
+        }
+
+        .hero-content {
+            max-width: 50%;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #e05a5a;
+            transform: translateY(-2px);
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .features {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: #fff;
+        }
+
+        .features h2 {
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            padding: 2rem;
+            background: var(--light);
+            border-radius: 10px;
+            transition: translateY 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            color: var(--secondary);
+            margin-top: 1rem;
+        }
+
+        .cta-section {
+            background-color: var(--secondary);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .signup-form {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .signup-form input[type="email"] {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 50px;
+            width: 300px;
+            font-size: 1rem;
+        }
+
+        .signup-form button {
+            background-color: var(--dark);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.2s;
+        }
+
+        .signup-form button:hover {
+            background-color: #1a2529;
+        }
+
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 2rem 1rem;
+            }
+            .hero-content {
+                max-width: 100%;
+                margin-bottom: 2rem;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">🐾 PetPals</div>
+        <a href="#registro" class="btn" style="padding: 0.5rem 1.5rem;">Unirse</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>La red social donde tu mascota es la estrella</h1>
+            <p>Conecta con otros amantes de los animales, comparte las fotos más tiernas de tus compañeros, agenda citas de juego y encuentra los mejores consejos para su bienestar.</p>
+            <a href="#registro" class="btn">Crea su perfil gratis</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=500&q=80" alt="Perro feliz usando PetPals">
+        </div>
+    </section>
+
+    <section class="features">
+        <h2>¿Qué puedes hacer en PetPals?</h2>
+        <div class="grid">
+            <div class="feature-card">
+                <h3>📸 Presume a tu amigo</h3>
+                <p>Sube fotos, videos e historias de sus mejores momentos. ¡Consigue seguidores para tu michi o lomito!</p>
+            </div>
+            <div class="feature-card">
+                <h3>📍 Citas de Juego</h3>
+                <p>Encuentra mascotas cerca de ti y organiza paseos en grupo o tardes de juego en el parque.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🩺 Consejos Expertos</h3>
+                <p>Accede a una comunidad de veterinarios y cuidadores dispuestos a resolver tus dudas.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section" id="registro">
+        <h2>¿Listo para empezar la aventura?</h2>
+        <p>Únete hoy a la comunidad de huellitas más grande del mundo.</p>
+        
+        <form class="signup-form" onsubmit="event.preventDefault(); alert('¡Gracias por registrarte! Pronto recibirás tu invitación.');">
+            <input type="email" placeholder="Tu correo electrónico" required>
+            <button type="submit">Registrar a mi mascota</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 PetPals. Todos los derechos reservados. Hecho con ❤️ para los animales.</p>
+    </footer>
+
+</body>
+</html>
